@@ -23,21 +23,86 @@
 3. Algorithms
 4. Functors
 
-#### Containers:
+#### 1. Containers:
 
     - data structure to store
+    - Types:
+      1 Sequence
+        : data elements are stored here
+        : vectors, stack, array, queue
 
-#### Iterators:
+
+      2 Associative
+        : increment associative arrays, key and value
+        : use of key to access values
+
+          - Ordered : incremented with help of balanced binary tree
+                    : height = log(n), n is height of tree
+                    : e.g. map, multimap, set, multiset
+
+          - Unordered : incremented using hash table
+                      : O(1) as operation time
+                      : unordered set, unordered map, ...
+
+##### Vector:
+
+- dynamic size array
+- keeps doubling size of array when the number of elements is higher than the memory allocated at first
+
+##### Array:
+
+- fixed size array
+
+##### List:
+
+- `std::list`
+- doubly linked list
+- pointer for before and after
+
+##### Forward_list
+
+- singly linked list
+- only next pointer is there
+
+##### Deque
+
+- Double ended queue
+- supports push and pop at both ends
+- not stored contiguously, but stored as chunks of contiguous data
+
+##### Container Adapters
+
+- they are **templates** as well
+- interfaces that implement special functionality on top of sequential containers
+- Stack: with deque
+- Queue: with deque
+- Priority Queue: deques the element with highest priority
+  - by heap
+  - underlying container: vector
+  - `priority_queue(vector<int> int, )`
+
+##### Set(unordered):
+
+- no duplicates
+- unique elements as keys
+
+#### Map:
+
+- pairs
+- (x, y)
+  - `x:key, y:value`
+
+#### 2. Iterators:
 
     - allow traversals of containers
 
-#### Algorithms
+#### 3. Algorithms
 
     - implement operations
         - sort, search, modify, count
     - defined in algorithm.h
 
-#### Functors
+#### 4. Functors
 
     - acts just like a function but has advantages that it is stateful
 
