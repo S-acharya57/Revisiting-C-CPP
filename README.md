@@ -1,4 +1,4 @@
-# Revisiting-C-C-
+# Revisiting-C-CPP
 
 This repository is a revising journey of fundamental concepts in C and C++.
 
